@@ -1,0 +1,211 @@
+/* Resets and Global Styling */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Jost', sans-serif;
+	background-color: #bef0eb; /* "Cruise" from http://khroma.co */
+	color: #1e5f7d; /* "Blumine" */
+}
+
+/* Removes being able to acidently click on icons rather than the button */
+.fa-trash,
+.fa-check {
+	pointer-events: none;
+}
+
+/* Header Styling */
+header {
+	margin: 1rem;
+	text-align: center;
+}
+
+header h2 {
+	display: inline;
+	padding: 0 0.2em;
+	background-image: linear-gradient(to top, #f0f8ff 45%, transparent 45%, transparent 100%);
+	font-size: 1.2rem;
+	font-style: italic;
+	color: #36454f;
+}
+
+/* Form Styling */
+form {
+	margin: 3rem 1rem 1rem 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+form input,
+form button {
+	padding: 0.5rem;
+	font-size: 1.2rem;
+	border: none;
+	background: #f0f8ff;
+	transition: all 200ms ease;
+}
+
+form input:focus,
+form input:hover {
+	outline: none;
+	background: white;
+}
+
+form button:focus,
+form button:hover {
+	outline: none;
+	background: #3cb371;
+	cursor: pointer;
+}
+
+.fa-plus {
+	color: #1e5f7d;
+	transition: all 200ms ease;
+}
+
+form button:focus .fa-plus,
+form button:hover .fa-plus {
+	color: white;
+}
+
+/* Drop Down Styling */
+select {
+	-webkit-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	outline: none;
+	border: none;
+	padding: 0.5rem;
+	width: 8rem;
+	color: #36454f;
+	background-color: #f0f8ff;
+	font-size: 1.2rem;
+	transition: all 200ms ease;
+}
+
+select:hover,
+select:focus {
+	cursor: pointer;
+	background-color: white;
+}
+
+.select {
+	margin-left: 2rem;
+	position: relative;
+	overflow: hidden;
+}
+
+.select::after {
+	content: '\25BC';
+	position: absolute;
+	font-size: 1.2rem;
+	top: 3px;
+	right: 3px;
+	pointer-events: none;
+}
+
+/* Todos Styling */
+.todo-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 3rem 1rem 1rem 1rem;
+}
+
+.todo-list {
+	min-width: 32rem;
+	list-style: none;
+	font-size: 1.2rem;
+}
+
+.todo {
+	padding: 0.5rem;
+	margin-bottom: 0.5rem;
+	display: flex;
+	background-color: #f0f8ff;
+}
+
+.todo-item {
+	margin-right: auto;
+	color: #36454f;
+}
+
+.completed-btn {
+	border: none;
+	padding: 0 0.5rem;
+	background-color: transparent;
+	color: #3cb371;
+	cursor: pointer;
+	transition: all 200ms ease;
+}
+
+.delete-btn {
+	border: none;
+	padding: 0 0.5rem;
+	background-color: transparent;
+	color: tomato;
+	cursor: pointer;
+	transition: all 200ms ease;
+}
+
+.completed-btn:focus,
+.completed-btn:hover,
+.delete-btn:focus,
+.delete-btn:hover {
+	outline: none;
+	color: #36454f;
+}
+
+.completed {
+	text-decoration: line-through;
+	opacity: 0.6;
+	transition: all 200ms ease;
+}
+
+.shift {
+	transform: translateX(3rem);
+	opacity: 0;
+	transition: all 300ms ease-out;
+}
+
+/* toast styling */
+.toast {
+	visibility: hidden;
+	position: fixed;
+	bottom: 10vh;
+	right: 10vw;
+	padding: 0.5rem 1rem;
+	background-color: tomato;
+	color: white;
+	text-align: center;
+	border-radius: 3px;
+	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.show {
+	visibility: visible;
+	animation: fadeinout 2.2s;
+}
+
+@keyframes fadeinout {
+	0% {
+		bottom: 3vh;
+		opacity: 0;
+	}
+	20% {
+		bottom: 10vh;
+		opacity: 1;
+	}
+	80% {
+		bottom: 10vh;
+		opacity: 1;
+	}
+	100% {
+		bottom: 3vh;
+		opacity: 0;
+	}
+}
