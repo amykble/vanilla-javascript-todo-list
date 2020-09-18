@@ -8,4 +8,9 @@ I first fell in love with front end web development when I started writing css. 
 
 This app could easily be built on, which I might do in the future. You could easily add local storage support, more animations, the ability to reorder the list items, multiple lists, and so on.
 
+## Upcoming Commits
+
+- Responsive design
+- Do not allow " " space todos
+
 <p>Created with html, css, and vanilla javascript by <a href="https://www.amykble.dev" target="_blank" rel="noopener">Amy Keable</a></p>
